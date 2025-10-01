@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className='App'>
-        <h1>Cat Fact FlashCards</h1>
+        <h1>Cat Fact Flashcards</h1>
         <h2>Do you love cats? Test your knowledge of cats here!</h2>
         <h4>Number of cards: {cardContent.length}</h4>
         <FlashCard Question={cardContent[0].Question} Answer={cardContent[0].Answer}/>

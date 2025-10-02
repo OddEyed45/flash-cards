@@ -22,3 +22,13 @@
   text-align: center;
 }
 
+.current-card {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  cursor: pointer;
+}
+
+.current-card:hover {
+  top: -5px;
+}

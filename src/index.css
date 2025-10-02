@@ -89,3 +89,12 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+}

@@ -52,6 +52,11 @@ h4 {
   color: #8846ce;
 }
 
+h5 {
+  color: #8846ce;
+}
+
+
 h1 {
   margin: 0;
   padding: 0 0 3px 0;
@@ -96,5 +101,14 @@ button:focus-visible {
   width: 80%;
   margin-left: 40px;
   margin-right: 40px;
+  margin-top: 10px;
+}
+
+.guess {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-top: 10px;
 }

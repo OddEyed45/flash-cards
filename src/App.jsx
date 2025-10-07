@@ -15,6 +15,7 @@ function App() {
   const [cardIdx, setCardIdx] = useState(-1);
   const [sideShown, setSideShown] = useState("Question");
   const [internalIdx, setInternalIdx] = useState(-1);
+  const [guess, setGuess] = useState("");
 
   let tempIdxList = [];
   for (let idx = 0; idx < cardContent.length; idx++)
@@ -44,7 +45,12 @@ function App() {
     }
   }
 
-  console.log(idxList);
+  const checkGuess = () => {
+    if (guess == cardContent[cardIdx].Answer)
+      alert("Correct Answer!");
+    else
+      alert("Sorry :( Wrong Answer.")
+  }
 
   return (
     <>
@@ -56,6 +62,11 @@ function App() {
           <div className='current-card' onClick={flipCard}>
             <FlashCard Question={(cardIdx >= 0) ? cardContent.at(cardIdx).Question : "Click the next button to see the questions"} 
             Answer={(cardIdx >= 0) ? cardContent.at(cardIdx).Answer : "Click the next button to see the fun answers"} sideShown={sideShown} />
+          </div>
+          <div className='guess'>
+            <h5>Type your guess:</h5>
+            <input type='input' value={guess} onChange={(e) => {setGuess(e.target.value)}}/>
+            <button onClick={checkGuess}>Guess!</button>
           </div>
           <div className='buttons'>
             <button onClick={setBack}>

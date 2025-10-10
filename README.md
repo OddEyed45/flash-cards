@@ -4,7 +4,7 @@ Submitted by: Sreeja Amaresam
 
 This web app: Shows some flashcards with some cat facts!
 
-Time spent: 2 hours spent in total
+Time spent: 5 hours spent in total
 
 ## Required Features
 
@@ -17,12 +17,12 @@ The following **required** functionality is completed:
   - [X] A list of card pairs is created
   - [X] The total number of cards in the set is displayed 
   - [X] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
-- [ ] **A single card at a time is displayed**
-  - [ ] Only one half of the information pair is displayed at a time
-- [ ] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
-  - [ ] Clicking on a card flips it over, showing the back with corresponding information 
-  - [ ] Clicking on a flipped card again flips it back, showing the front
-- [ ] **Clicking on the next button displays a random new card**
+- [X] **A single card at a time is displayed**
+  - [X] Only one half of the information pair is displayed at a time
+- [X] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
+  - [X] Clicking on a card flips it over, showing the back with corresponding information 
+  - [X] Clicking on a flipped card again flips it back, showing the front
+- [X] **Clicking on the next button displays a random new card**
 
 The following **optional** features are implemented:
 
@@ -40,11 +40,10 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/user-attachments/assets/f3dbc4c5-caa5-4385-8d8a-aa89c9586d51' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with [ScreenToGif](https://www.screentogif.com/)
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows

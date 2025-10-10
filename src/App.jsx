@@ -16,6 +16,10 @@ function App() {
   const [sideShown, setSideShown] = useState("Question");
   const [internalIdx, setInternalIdx] = useState(-1);
   const [guess, setGuess] = useState("");
+  const [buttonColor1, setButtonColor1] = useState("gray");
+  const [buttonCursor1, setButtonCursor1] = useState("auto");
+  const [buttonColor2, setButtonColor2] = useState("black");
+  const [buttonCursor2, setButtonCursor2] = useState("pointer");
 
   let tempIdxList = [];
   for (let idx = 0; idx < cardContent.length; idx++)
@@ -31,22 +35,40 @@ function App() {
 
   const setNext = () => {
     if (internalIdx < cardContent.length - 1) {
-      setCardIdx(idxList.at(internalIdx + 1));
+      const newIdx = internalIdx + 1;
+      setCardIdx(idxList.at(newIdx));
       setSideShown("Question");
-      setInternalIdx(internalIdx + 1);
+      setInternalIdx(newIdx);
+
+      // update button states based on the new internal index
+      const atEnd = newIdx >= cardContent.length - 1;
+      const atStart = newIdx <= 0;
+      setButtonColor2(atEnd ? "gray" : "black");
+      setButtonCursor2(atEnd ? "auto" : "pointer");
+      setButtonColor1(atStart ? "gray" : "black");
+      setButtonCursor1(atStart ? "auto" : "pointer");
     }
   }
 
   const setBack = () => {
     if (internalIdx > 0) {
-      setCardIdx(idxList.at(internalIdx - 1));
+      const newIdx = internalIdx - 1;
+      setCardIdx(idxList.at(newIdx));
       setSideShown("Question");
-      setInternalIdx(internalIdx - 1);
+      setInternalIdx(newIdx);
+
+      // update button states based on the new internal index
+      const atStart = newIdx <= 0;
+      const atEnd = newIdx >= cardContent.length - 1;
+      setButtonColor1(atStart ? "gray" : "black");
+      setButtonCursor1(atStart ? "auto" : "pointer");
+      setButtonColor2(atEnd ? "gray" : "black");
+      setButtonCursor2(atEnd ? "auto" : "pointer");
     }
   }
 
   const checkGuess = () => {
-    if (guess == cardContent[cardIdx].Answer)
+    if (guess.toLocaleLowerCase() == cardContent[cardIdx].Answer.toLocaleLowerCase())
       alert("Correct Answer!");
     else
       alert("Sorry :( Wrong Answer.")
@@ -69,10 +91,10 @@ function App() {
             <button onClick={checkGuess}>Guess!</button>
           </div>
           <div className='buttons'>
-            <button onClick={setBack}>
+            <button onClick={setBack} style={{backgroundColor: buttonColor1, cursor: buttonCursor1}}>
               Back
             </button>
-            <button onClick={setNext}>
+            <button onClick={setNext} style={{backgroundColor: buttonColor2, cursor: buttonCursor2}}>
               Next
             </button>
           </div>

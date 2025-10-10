@@ -56,7 +56,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+It was a little difficult to get the graying out effect to work for the correct situations.
 
 ## License
 
